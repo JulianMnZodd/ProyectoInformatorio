@@ -2,7 +2,44 @@
 {%load static %}
 
 {%block contenido%}
-    <h2>Soy la pantalla de listar noticias</h2>
-    <br>
-    <a href="{%url 'home'%}">volver al home</a>
+    <h2 style="text-align:center;">Últimas Noticias</h2>
+    <div class="container"style="width: 1200px;">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            {%for n in notis%}
+            <div class="col">
+              <div class="card" >
+                <img src="{{n.imagen.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ n }}</h5>
+                  <p class="card-text">{{ n.cuerpo }}.</p>
+                </div>
+              </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+    
+    <!-----
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card " style="width: 25rem;">
+                {%if n.imagen%}
+                    <img src="{{n.imagen.url}}" class="card-img-top" alt="...">
+                {%else%}
+                    <p>No tiene imagen</p>
+                {%endif%}
+                <div class="card-body">
+                <h5 class="card-title"> {{ n }}</h5>
+                <p class="card-text">{{ n.cuerpo }}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+    --->
+
+    
 {%endblock contenido%}
