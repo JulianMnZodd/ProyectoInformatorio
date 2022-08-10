@@ -1,0 +1,45 @@
+Boostrap: Libreria de estilos CSS, creada por Twitter, sus caracteristicas es dotar a los sitios web de responisivididad
+
+CDN (Contet Delivery Network): Red de disrtibucion de contenidos.
+
+Boostrap maneja todo lo que son clases, para poder aplicarle los estilos de Boostrap a algun elemenoto debemos utilizar las clases propias que nos da Boostrap
+
+Divide todo el contenido de la pantalla en 12 secciones del mismo tamaño (12 
+bloques)
+
+TAMAÑO DE PANATALLA:
+
+sm:small
+md:medium
+lg:large
+xl:extra large
+
+Fila: "row" entiendie como espacio horizontal dentro de la pantalla. 
+
+------Compounets--------
+
+Ver etiquetas o controles predefinidos listos para usar
+*Breadcrumb: Menus que estan dentros de otros menus
+*Card: Tarjetas 
+*Navbar: Barra de navegacion
+*Buttons: Ver colores de botones para la barra/pantalla de navegacion
+
+Margin: Es con los elementos de afuera(Contenedor contra otro contenedor)
+-----------My=Margen en el ejes de las y(Vertical)
+-----------Mx=Margen en el ejes de las x(Horizontal)
+Padig: Utiliza los elementos internos(Elemenos adentro de un contenedor se pongan mas al centro)
+-----------Py=Margen en el eje de las y(Vertical)
+-----------Px=Margen en el eje de las x(Horizontal)
+
+----Formularios-----
+En buscar documentacion buscar Froms 
+
+----Centrar elementos----
+Posision/Center elements
+
+ms= Margin Start(margen a la izquierda)
+
+-----Aplicar fondo de pagina------
+
+uigradients
+
