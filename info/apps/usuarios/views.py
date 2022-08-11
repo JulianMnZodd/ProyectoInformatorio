@@ -6,3 +6,6 @@ def Logearse(request):
 
 def Registrarse(request):
     return render(request,'usuarios/Registrarse.html')
+
+def index(request):
+    return render(request,'usuarios/index.html')

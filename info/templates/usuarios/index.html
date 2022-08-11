@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{%load static %}
+
+#{%block contenido%}
+    
+<head>
+  <meta charset="utf-8">
+  <title>Login Form Design One | Fazt</title>
+  <link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+
+  <div class="login-box">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9fUTvFwxQgsPVrYwE9Bn6xkLKgOJa2aPVrk8fdatI_K27-kEswPwFX34pNcafsN6KW0g&usqp=CAU" class="avatar" alt="Avatar Image">
+    <!--img src="C:/Users/Coronel Ernesto/Desktop/Python.3.1/login-form-one-master/img/bg.jpeg" class="avatar" alt="Avatar Image"-->
+    <h1 style="text-align:center;">Logeate aqui</h1>
+    <form>
+      <!-- USERNAME INPUT -->
+      <label for="usuario">Usuario </label>
+      <input type="text" placeholder="Escribe tu nombre">
+      <!-- PASSWORD INPUT -->
+      <label for="password">Clave</label>
+      <input type="password" placeholder="Escribe tu clave">
+      <input type="submit" value="Entrar">
+      <a href="#">Perdiste tu clave?</a><br>
+      <a href="#">No tienes cuenta?</a>
+    </form>
+  </div>
+</body>
+ 
+{%endblock contenido%}
+
