@@ -5,7 +5,20 @@ body {
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(98, 132, 184);
-    color: rgb(37, 33, 230);
+    color: rgb(230, 161, 33);
 
   }
   
+.login-box {
+  width: 320px;
+  height: 420px;
+  background: #000;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+
