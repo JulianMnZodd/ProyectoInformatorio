@@ -20,3 +20,7 @@ class Noticia(models.Model):
     
     def __str__(self):
         return self.titulo
+    
+    def TextCorto(self):
+        return self.cuerpo[:180]+"..."
+    

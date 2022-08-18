@@ -1,0 +1,76 @@
+[33mcommit 7dbc34ce307ba5a0f0f44893debf3e6493f80d6a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 623bd3c e8fd8b3
+Author: Navarro Mauricio <88993080+JulianMnZodd@users.noreply.github.com>
+Date:   Tue Aug 9 15:22:26 2022 -0300
+
+    Merge pull request #1 from JulianMnZodd/RamaMauricio
+    
+    Actualizando la base y el home del proyecto
+
+[33mcommit e8fd8b3bbc1a68215cbf6bb9fe99532ae0b400cf[m
+Merge: 1d301c5 623bd3c
+Author: Navarro Mauricio <88993080+JulianMnZodd@users.noreply.github.com>
+Date:   Tue Aug 9 15:21:59 2022 -0300
+
+    Merge branch 'main' into RamaMauricio
+
+[33mcommit 1d301c558ed936481dd8bccd82745205fefec449[m
+Author: Navarro Mauricio <julianmn15@gmail.com>
+Date:   Tue Aug 9 15:16:37 2022 -0300
+
+    Actualizando la base y el home del proyecto
+
+[33mcommit 623bd3c4bd92245b18ce5bb1f82c7847268731a1[m
+Merge: 1378f46 7c80b81
+Author: unknown <efcoro@gmail.com>
+Date:   Thu Aug 4 19:56:01 2022 -0300
+
+    algo
+
+[33mcommit 1378f4606c09885688175df685e7946ff90f55ac[m
+Author: unknown <efcoro@gmail.com>
+Date:   Thu Aug 4 19:42:55 2022 -0300
+
+     segundo cambio
+
+[33mcommit 7c80b81e0e076bbd5d4675304692ee5c0b3ff52d[m
+Author: Evelyn Martinez <martinezeve04@gmail.com>
+Date:   Thu Aug 4 19:34:12 2022 -0300
+
+    hice otro cambio
+
+[33mcommit 8a30deb65eefe62da7d4789a5cd1ad0ff7c837cb[m
+Author: Evelyn Martinez <martinezeve04@gmail.com>
+Date:   Thu Aug 4 19:28:29 2022 -0300
+
+    hice un cambio
+
+[33mcommit c6ed4861eac86304ebc5360159058c371b1be4fe[m
+Author: Leonel Martinez Cabral <leonelcabral1@hotmail.com>
+Date:   Thu Aug 4 12:43:51 2022 -0300
+
+    Probando commit
+
+[33mcommit a2dc8e948b15afcdd15207d5ed163d62a223436c[m
+Author: Navarro Mauricio <julianmn15@gmail.com>
+Date:   Thu Aug 4 12:25:50 2022 -0300
+
+    Agregando lo ultimo hecho en clase
+
+[33mcommit 3623b939a606ab3a64c6d604cc0ddf2a7a8d0e89[m
+Author: Navarro Mauricio <julianmn15@gmail.com>
+Date:   Thu Aug 4 10:41:40 2022 -0300
+
+    Cargando la aplicacion noticias que se hizo en clase
+
+[33mcommit f0122c6ce794f76c8f6158d52bc4f8d006a251c9[m
+Author: Navarro Mauricio <julianmn15@gmail.com>
+Date:   Tue Aug 2 12:48:25 2022 -0300
+
+    probando commit
+
+[33mcommit f6cb93793ec38986162668d533727599a68484cc[m
+Author: Navarro Mauricio <julianmn15@gmail.com>
+Date:   Tue Aug 2 12:21:40 2022 -0300
+
+    Cargando los archivos bases del poyecto

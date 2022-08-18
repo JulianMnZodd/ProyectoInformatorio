@@ -1,0 +1,60 @@
+{%extends 'base.html'%}
+{%load static %}
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contacto</title>
+	<link rel="stylesheet" href="contacto.css">
+</head>
+-->
+
+{%block contenido %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="{% static 'css/contacto.css' %}">
+<body>
+	<div class="title-cards">
+		<h2>Contactanos</h2>
+	</div>
+<div class="container-card">
+	
+<div class="card">
+	<figure>
+		<img src="../static/img/telefono.png">
+	</figure>
+	<div class="contenido-card">
+		<h3>Teléfonos</h3>
+		<p><i class="bi bi-telephone"></i> 3644-349940 <br>Rosana Toledo - Delegada Diosesana
+        <br> <i class="bi bi-telephone"></i> 3644-621885 <br> Ana Belen Molina - Asesora de comunidades</p>
+	</div>
+</div>
+<div class="card">
+	<figure>
+		<img src="../static/img/redes.png">
+	</figure>
+	<div class="contenido-card">
+		<h3>Redes Sociales</h3>
+		<p>Seguinos en Instagram y nuestro grupo de Facebook</p>
+		<a href="https://instagram.com/elangeldelabicicletacastelli?igshid=YmMyMTA2M2Y=" target="_blank" class="insta">
+            <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/groups/498186250237283/?ref=share" target="_blank" class="face">
+            <i class="bi bi-facebook"></i>
+        </a>
+	</div>
+</div>
+<div class="card">
+	<figure>
+		<img src="../static/img/mapa.png">
+	</figure>
+	<div class="contenido-card">
+		<h3>Ubicación</h3>
+		<p> <i class="bi bi-geo-alt-fill"></i> Casa Angelelli Barrio “Chacra 108” calle Mistol - J.J. Castelli</p>
+	</div>
+</div>
+</div>
+</body>
+{%endblock contenido%}

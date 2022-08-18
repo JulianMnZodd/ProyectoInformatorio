@@ -27,6 +27,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Application definition
 AUTH_USER_MODEL='usuarios.Usuario'# usuarios en la aplicacion y Usuario es el modelo
 
+LOGIN_REDIRECT_URL = reverse_lazy('home')
+LOGOUT_REDIRECT_URL = reverse_lazy('home')
+LOGIN_URL=reverse_lazy('usuarios:Logearse')
 
 INSTALLED_APPS = [
     'django.contrib.admin',

@@ -2,44 +2,70 @@
 {%load static %}
 
 {%block contenido%}
-    <h2 style="text-align:center;">Últimas Noticias</h2>
-    <div class="container"style="width: 1200px;">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            {%for n in notis%}
-            <div class="col">
-              <div class="card" >
-                <img src="{{n.imagen.url}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{ n }}</h5>
-                  <p class="card-text">{{ n.cuerpo }}.</p>
-                </div>
-              </div>
-            </div>
-            {%endfor%}
-        </div>
+<h2 class="p-2" style="text-align:center; font-family: 'Oleo Script Swash Caps', cursive;">Noticias</h2>
+<div class="container"style="max-width: 1100px;">
+  <hr class="border border-primary border-2 opacity-50">
+    <!---Filtrado-->
+  <div class="d-flex justify-content-end pb-4">
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Filtrar
+      </button>
+      <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="{%url 'noticias:listar_noticiasporFecha'%}">Más recientes</a></li>
+      <li><a class="dropdown-item" href="{%url 'noticias:listar_noticias'%}">Más Antiguas</a></li>
+      <li><a class="dropdown-item" href="#"></a></li>
+      </ul>
     </div>
-    
-    <!-----
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card " style="width: 25rem;">
-                {%if n.imagen%}
-                    <img src="{{n.imagen.url}}" class="card-img-top" alt="...">
-                {%else%}
-                    <p>No tiene imagen</p>
-                {%endif%}
-                <div class="card-body">
-                <h5 class="card-title"> {{ n }}</h5>
-                <p class="card-text">{{ n.cuerpo }}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+  </div>
+ 
+  <!----------------------->
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {%for post in posts%}
+        <div class="col">
+          <div class="card shadow border" >
+            <img src="{{post.imagen.url}} " class="card-img-top" alt="..." style="max-height: 500px;">
+            <div class="card-body">
+              <h6 class="list-group-item">{{post.creado}}</h6>
+              <h5 class="card-title">{{ post }}</h5>
+              <p class="card-text">{{ post.TextCorto }}.</p>
+              
+              <a type="button" class="btn btn-outline-primary" href="{%url 'noticias:MostrarNoticia' post.id %}">Saber más...</a>
+
             </div>
           </div>
         </div>
-        
+        {%endfor%}
     </div>
-    --->
+</div>
+<!---Pagination-->
+<br>
+<br>
+<nav aria-label="...">
+  <ul class="pagination justify-content-center">
 
+    {%if posts.has_previous%}
+    <li class="page-item">
+      <a class="page-link" href="?page=1">Primera</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="?page={{posts.previous_page_number}}">&laquo;</a>
+    </li>
+    {%endif%}
+
+    {%for pagina in paginas%}
+    <li class="page-item">
+      <a class="page-link" href="?page={{pagina}}">{{pagina}}</a>
+    </li>
+    {%endfor%}
     
+    {%if posts.has_next%}
+    <li class="page-item">
+      <a class="page-link" href="?page={{posts.next_page_number}}">&raquo;</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="?page={{posts.paginator.num_pages}}">Ultima</a></li>
+    {%endif%}
+    
+  </ul>
+</nav>
 {%endblock contenido%}

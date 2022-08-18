@@ -2,62 +2,39 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-/*-------Imagen del principio---------------*/
-.banner-inicio{
-    width: 100%;
-    height: 600px;
-    background-image: url(https://downloader.la/temp/[Downloader.la]-62f1a20e601d3.jpg);
-    background-size:cover;
-    background-attachment: fixed;
-    padding-left: 600px;
-    padding-top: 120px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.lead{
-    font-family: 'Oleo Script Swash Caps', cursive;
-    width: 500px;
-    color: black;
-    text-align: center;
-    font-size: 50px;
-}
-/*----------------------------------------------------*/
-
-/*Editando el nav*/
-
-.navbar{
-    font-size: 17px;
-    font-family: 'Oleo Script Swash Caps', cursive;
+body{
+    background-color: snow;
+    /* padding-top: 70px; */
 }
 
-.navbar-brand{
-    margin-right: 250px;
-    font-size: 28px;
-    color: #ffffff;
-}
+            /* NAV */
 
 .nav-link{
-    color: rgb(14, 13, 13);
-}
-/*--------------------------------------------------------*/
-
-/*-----------Esta es la imagen justo debajo del nav-----------------*/
-.div-img{
-    width: 100%;
-    height: 600px;
-    background-image: url(https://images.pexels.com/photos/159862/art-school-of-athens-raphael-italian-painter-fresco-159862.jpeg);
-    background-size: cover;
-    background-attachment: fixed;
+    color: #FFFFFF;
 }
 
-.div-slogan{
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    color: #2b29aa;
-    font-size: 50px;
-    font-family: 'Oleo Script Swash Caps', cursive;
+nav{
+    background-color: cadetblue;
 }
-/*---------------------------------------------------------------*/
+
+/******************************/
+            /* Main */
+
+ 
+.bg-image{
+    background-image: url('../img/iglesia.jpg');
+    background-size: cover; 
+    background-position: center;
+}
+ 
+.bg-image h1{
+    margin-top: 200px;
+
+}
+
+.col-md-9{
+    height: 500px;
+}
