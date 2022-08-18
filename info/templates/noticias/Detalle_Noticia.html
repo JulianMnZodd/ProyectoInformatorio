@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{%load static %}
+
+{%block contenido%}
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <div class="card mb-3" style="width: 100%;">
+            <div class="d-flex justify-content-center">
+                <img src="{{object.imagen.url}}" class="card-img-top" alt="..." style="max-height:500px; ">
+            </div>
+            <div class="card-body">
+            <h2 class="card-title">{{object}}</h2>
+            <p class="card-text">{{object.cuerpo}}.</p>
+            <p class="card-text"><small class="text-muted">Creado el: {{object.creado}}</small></p>
+            <p class="card-text"><small class="text-muted">Autor: {{object.autor}} <br> Categoria:{{object.categoria}}</small></p>
+            </div>
+        </div>  
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">{Nombre del usuario}</label>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+</div>
+
+
+{%endblock contenido%}
