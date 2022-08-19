@@ -29,7 +29,7 @@ AUTH_USER_MODEL='usuarios.Usuario'# usuarios en la aplicacion y Usuario es el mo
 
 LOGIN_REDIRECT_URL = reverse_lazy('home')
 LOGOUT_REDIRECT_URL = reverse_lazy('home')
-#LOGIN_URL=reverse_lazy('home') #usuarios:Logearse
+LOGIN_URL=reverse_lazy('usuarios:Logearse') 
 
 INSTALLED_APPS = [
     'django.contrib.admin',
