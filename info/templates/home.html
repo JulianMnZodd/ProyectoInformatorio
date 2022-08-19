@@ -25,24 +25,40 @@
         </div> -->
 
         <!--SIDE BAR - BODY-->
+        <br>
         <div class="container-lg">
             <div class="row">
-                <div class="col-md-9" style="background-color: orange;">
-                    BODY
-                    <div class="row">
-                        NOTICIA 1
+                <div class="col-md-9">
+                    {%for post in noticia %}
+                    <div class="row p-2" >
+                        <div class="col-md-4">
+                            <img src="{{post.imagen.url}}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                          <div class="col-md-8">
+                            <div class="card-body" style="position:relative;">
+                              <h5 class="card-title">{{post}}</h5>
+                              <p class="card-text">{{post.TextCorto}}</p>
+                              <p class="card-text"><small class="text-muted">{{post.creado}}</small></p>
+                              <a href="{%url 'noticias:MostrarNoticia' post.id %}"class="stretched-link"></a>
+                            </div>
+                          </div>
                     </div>
-                    <div class="row">
-                        NOTICIA 2
+                    {%endfor%}
+                    <div class="container-lg">
+                        <div class="row">
+                            <div class="col-sm-12" style="background-color:palegreen ;">
+                                --SEPARADOR-- (Cards)
+                            </div>
+                        </div>
                     </div>
-                    <div class="row">
-                        NOTICIA 3
-                    </div>
-                    <div class="row">
-                        NOTICIA 4
-                    </div>
-                    <div class="row">
-                        NOTICIA 5
+            
+                    <!--FOOTER-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col" style="background-color: #ffff;">
+                                FOOTER
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3" style="background-color:aqua;">
@@ -64,22 +80,7 @@
         </div>
 
         <!--SEPARADOR-->
-        <div class="container-lg">
-            <div class="row">
-                <div class="col-sm-12" style="background-color:palegreen ;">
-                    --SEPARADOR-- (Cards)
-                </div>
-            </div>
-        </div>
-
-        <!--FOOTER-->
-        <div class="container">
-            <div class="row">
-                <div class="col" style="background-color: #ffff;">
-                    FOOTER
-                </div>
-            </div>
-        </div>
+        
 
     </main> 
     
