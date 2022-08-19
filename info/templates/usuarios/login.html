@@ -1,8 +1,19 @@
-{%extends 'base.html'%}
-{%load static %}
+{% extends 'base.html' %}
 
-{%block contenido%}
+{% block contenido %}
+<body>
 
+
+
+			<form method="POST">{%csrf_token%}
+				{{form.errors}}
+				<input type="text" name="username" placeholder="USUARIO">
+				<input type="password" name="password" placeholder="PASSWORD">
+
+				<input type="submit" name="" value="ENVIAR">
+			</form>
+
+</body>
 <div class="container">
     <div class="d-flex justify-content-center">
         <div class="card mb-3" style="width: 100%;">
@@ -17,13 +28,6 @@
             </div>
         </div>  
     </div>
-    <form method="POST">{%csrf_token%}
-        {{form.errors}}
-        <input type="text" name="username" placeholder="USUARIO">
-        <input type="password" name="password" placeholder="PASSWORD">
-
-        <input type="submit" name="" value="ENVIAR">
-    </form>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">{Nombre del usuario}</label>
       </div>
@@ -32,6 +36,4 @@
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
 </div>
-
-
-{%endblock contenido%}
+{% endblock contenido %}

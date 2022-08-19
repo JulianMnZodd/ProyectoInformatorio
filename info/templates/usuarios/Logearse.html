@@ -1,12 +1,21 @@
 
-
 {%extends 'base.html'%}
 {%load static %}
-<link rel = "stylesheet" href="style.css">
+<link rel = "stylesheet" href="static/css/main.css"-->
 
 
-#{%block contenido%}
- <body style="text-align:center;  margin-top: 100px;">
+{% block contenido %}
+			<form method="POST">{%csrf_token%}
+				{{form.errors}}
+				<input type="text" name="username" placeholder="USUARIO">
+				<input type="password" name="password" placeholder="PASSWORD">
+
+				<input type="submit" name="" value="ENVIAR">
+			</form>
+
+
+
+ <body class = "my-body" style="text-align:center;  margin-top: 100px;">
   <div class="form-body" style="
     
     align-items: center;
@@ -24,11 +33,11 @@
     </p>
     <form class="login-form" >
         
-      <input style="margin-top: 5;"
+      <input style="margin-top: 5px;"
       type="text" placeholder="Email o nombre de usuario"><br>
       
-      <h1></h1>
-      <input style="margin-top: 15;"
+     
+      <input style="margin-top: 15px;"
       type="password" placeholder="Contraseña"><h1>
 
       <button style=
@@ -49,6 +58,3 @@
     
     
 {%endblock contenido%}
-
-
-

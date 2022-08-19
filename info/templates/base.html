@@ -35,8 +35,14 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cuenta </a>
                 <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{%url 'usuarios:Logearse' %}">Iniciar sesión</a></li>
-                <li><a class="dropdown-item" href="{%url 'usuarios:Registrarse' %}">Registrarse</a></li>
+                    {% if user.is_authenticated %}
+                              <span>HOLA {{user.username}}!!</span>
+                              <a href="{% url 'usuarios:logout' %}">LOGOUT</a>
+                        {% else %}
+                              <a href="{% url 'usuarios:Logearse' %}">LOGIN</a>
+                        {% endif %}
+                    <li><a class="dropdown-item" href="{%url 'usuarios:Logearse'%}"> Ingresar</a></li><!---El nombre de la aplicacion + : + el name-->
+                    <li><a class="dropdown-item" href="{%url 'usuarios:Registrarse'%}">Registrarse</a></li>
                 </ul>
             </li>
             <li class="nav-item">
