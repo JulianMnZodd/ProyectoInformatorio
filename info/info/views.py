@@ -5,3 +5,6 @@ def Home(request):
 
 def contacto(request):
     return render(request,'contacto.html')
+
+def mision_vision(request):
+    return render(request,'mision_vision.html')
