@@ -31,7 +31,7 @@ urlpatterns = [
     path('mision_vision/', views.mision_vision, name = 'mision_vision'),
     path('noticias/',include('apps.noticias.urls')),
     path('usuarios/',include('apps.usuarios.urls')),
-
+    path('Actividades/',include('apps.actividades.urls')),
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
