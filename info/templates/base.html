@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 </head>
 <body>
-  <!-- Cabezera -->
+  <!-- Cabecera -->
   <header>
     <nav class="navbar navbar-expand-md fixed-top  p-md-3">
         <div class="container-fluid">
@@ -39,13 +39,12 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cuenta </a>
                 <ul class="dropdown-menu">
                     {% if user.is_authenticated %}
-                              <span>HOLA {{user.username}}!!</span>
-                              <a href="{% url 'usuarios:logout' %}">LOGOUT</a>
+                            <li><a class="dropdown-item">HOLA {{user.username}}!!</a></li>
+                            <li><a class="dropdown-item" href="{% url 'usuarios:logout' %}">Salir</a></li>
                         {% else %}
-                              <a href="{% url 'usuarios:Logearse' %}">LOGIN</a>
+                            <li><a class="dropdown-item" href="{%url 'usuarios:Logearse'%}">Ingresar</a></li>
+                            <li><a class="dropdown-item" href="{%url 'usuarios:Registrarse'%}">Registrarse</a></li>
                         {% endif %}
-                    <li><a class="dropdown-item" href="{%url 'usuarios:Logearse'%}"> Ingresar</a></li><!---El nombre de la aplicacion + : + el name-->
-                    <li><a class="dropdown-item" href="{%url 'usuarios:Registrarse'%}">Registrarse</a></li>
                 </ul>
             </li>
             <li class="nav-item">

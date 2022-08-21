@@ -9,6 +9,7 @@ app_name = 'actividades'
 
 urlpatterns = [
     path('listar/', views.Acts, name = 'listar_actividades'),
-
+    
+    path('detalle/<int:pk>', views.Detalle_Actividad, name = 'detalle_actividad'),
 ]
 
