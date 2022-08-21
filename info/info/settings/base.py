@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.usuarios',#cargo la nueva app
     'apps.noticias',
+    'apps.actividades',
 ]
 
 MIDDLEWARE = [
