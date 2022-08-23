@@ -45,5 +45,26 @@ def ListarporFecha(request):
 class DetalleNoticia(LoginRequiredMixin,DetailView):
     model=Noticia
     template_name='noticias/Detalle_Noticia.html'
+
+def ListarPatronales(request):
+    todas=Noticia.objects.all().filter(categoria=2)
     
+    paginator=Paginator(todas,4)
+    pagina= request.GET.get("page") or 1
+    posts =paginator.get_page(pagina)
+    currents_page= int(pagina)
+    paginas=range(1,posts.paginator.num_pages+1)
+    
+    return render(request,'noticias/listar_noticias.html',{"posts":posts,"paginas":paginas,"currents_page":currents_page})
+
+def ListarSociales(request):
+    todas=Noticia.objects.all().filter(categoria=3)
+    
+    paginator=Paginator(todas,4)
+    pagina= request.GET.get("page") or 1
+    posts =paginator.get_page(pagina)
+    currents_page= int(pagina)
+    paginas=range(1,posts.paginator.num_pages+1)
+    
+    return render(request,'noticias/listar_noticias.html',{"posts":posts,"paginas":paginas,"currents_page":currents_page})
     

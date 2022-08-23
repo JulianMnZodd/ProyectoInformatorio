@@ -8,4 +8,6 @@ urlpatterns = [
     path('listar/', views.Listar, name='listar_noticias'),
     path('listarPorFecha/', views.ListarporFecha, name='listar_noticiasporFecha'),
     path('MostrarNoticia/<int:pk>/', views.DetalleNoticia.as_view(), name='MostrarNoticia'),
+    path('listarPatronales/', views.ListarPatronales, name='listar_noticiasPatronales'),
+    path('listarSociales/', views.ListarSociales, name='listar_noticiasSociales'),
 ]
