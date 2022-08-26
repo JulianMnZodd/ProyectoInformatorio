@@ -35,7 +35,10 @@
         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"> 
             {% for x in object.obtener_mis_comentarios %}
             <div class="card border-secondary mb-3" style="max-width: 50rem;">
-                <div class="card-header">Usuario: {{x.usuario}} <a href="{% url 'noticias:eliminar_comentario' x.pk %}" class="btn-close" style="margin-left: 40rem;"></a></div>
+                <div class="card-header" style="display: flex; justify-content:space-between;">
+                        <label>Usuario: {{x.usuario}} </label> 
+                        <a style="font-size:10px ;" ref="{% url 'noticias:eliminar_comentario' x.pk %}" class="btn-close" ></a>
+                </div>
                 <div class="card-body">
                     <p class="card-text">{{x.texto}}</p>
                     <p class="card-text"><small class="text-muted">{{x.creado}}</small></p>
@@ -46,7 +49,7 @@
         </div>
         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">    {% if user.is_authenticated %}
             <form method="POST" action="{% url 'noticias:agregar_comentario' object.pk %}" >{% csrf_token %}
-                <div class="">
+                <div class="mb-1">
                     <label for="exampleFormControlInput1" class="form-label" style="font-size: 18px;">Usuario: {{user.username}}</label>
                   </div>
                   <div class="mb-3">
