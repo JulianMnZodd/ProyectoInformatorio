@@ -1,10 +1,21 @@
+from ast import Not
 from datetime import date
+from email import message
+from gc import get_objects
 from symtable import Class
-from django.shortcuts import render
+from urllib import response
+from django.shortcuts import render,get_object_or_404,redirect
 from .models import Noticia
 from django.core.paginator import Paginator
-from django.views.generic import DetailView
+from django.views.generic import DetailView,DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
+
+from django.urls import reverse_lazy
+from django.http import HttpResponseRedirect,HttpResponse
+
+
+from .models import Noticia,Comentario
+
 # Create your views here.
 
 def Listar(request):
@@ -67,4 +78,27 @@ def ListarSociales(request):
     paginas=range(1,posts.paginator.num_pages+1)
     
     return render(request,'noticias/listar_noticias.html',{"posts":posts,"paginas":paginas,"currents_page":currents_page})
-    
+
+
+def Agregar_Comentario(request,pk):
+	texto_comentario = request.POST.get('coment')
+	
+	#Forma 1 (es la mejor para este caso)
+	noti = Noticia.objects.get(pk = pk)
+
+	c = Comentario.objects.create(noticia = noti, texto = texto_comentario, usuario = request.user)
+
+	return HttpResponseRedirect(reverse_lazy('noticias:MostrarNoticia' , kwargs={'pk':pk}))
+
+
+def Eliminar_Comentario(request,pk):
+    comentario=get_object_or_404(Comentario,id=pk)
+    if comentario.usuario==request.user:
+        comentario.delete()
+        return HttpResponseRedirect(reverse_lazy('noticias:listar_noticias'))
+    else:
+        response=HttpResponse("NO TIENES PERMISO PARA ESTA ACCION")
+        response.status_code=403
+        return response
+        
+

@@ -1,7 +1,8 @@
 from distutils.command.upload import upload
 from email.mime import image
+import re
 from django.db import models
-
+from apps.usuarios.models import Usuario
 # Create your models here.
 class Categoria(models.Model):
     nombre = models.CharField(max_length=60)
@@ -23,4 +24,17 @@ class Noticia(models.Model):
     
     def TextCorto(self):
         return self.cuerpo[:180]+"..."
+    
+    def obtener_mis_comentarios(self):
+        return self.mis_comentarios.all()
+       
+
+class Comentario(models.Model):
+	noticia = models.ForeignKey(Noticia, related_name = 'mis_comentarios', on_delete = models.CASCADE)
+	texto = models.TextField()
+	creado = models.DateTimeField(auto_now_add = True)
+	usuario = models.ForeignKey(Usuario, related_name = 'usuario_comentario' , on_delete = models.CASCADE)
+
+	def __str__(self):
+		return self.texto
     
