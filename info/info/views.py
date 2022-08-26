@@ -14,3 +14,6 @@ def contacto(request):
 
 def mision_vision(request):
     return render(request,'mision_vision.html')
+
+def eventos(request):
+    return render(request, 'eventos.html')
