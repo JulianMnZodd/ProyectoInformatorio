@@ -9,39 +9,102 @@
 
 
 
-        <div class="container-fluid" style="background-color:bisque;">
-            <div class="row">
-                <div class="bg-image w-100 vh-100 d-block justify-content-center align-items-center">
-                    <div class="content text-center m-1">
-                        <h1>OPCION POR LOS POBRES</h1>
-                        <!--DISEÑAR LA FRASE-->
-                        <h2>(BARRA DE INICIO DE SESION)</h2>
-                        <!--DISEÑAR BARRA DE LOGUIN (NO DE REGISTRO)-->
-                    </div>
-                </div>
+     
+
+    <div class="contenedor">
+
+        <div class="box-noticias1">
+            <div class="Titulo">
+                <h1>NOVEDADES</h1>
+                <hr/>
+            </div>
+            {%for post in noticia%}
+            <img src="{{post.imagen.url}}" alt="" class="box-img">
+            <div class="box-info-noticia">
+                <p><small class="text-muted" style="font-style: italic; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"; >{{post.creado}}</small></p>
+                <h1>{{post}}</h1>
+                <p class="p-textcorto">{{post.TextCorto}}</p>
+                <a href="{%url 'noticias:MostrarNoticia' post.id %}"> Saber más..</a> 
+            </div>
+            {%endfor%}
+            <a class="btn btn-primary" href="{%url 'noticias:listar_noticias' %}" role="button" style="margin-top: 0.5rem;">Ver más noticias...</a>
+                    <!-- <nav aria-label="Page navigation example" style="background-color:transparent;">
+                        <ul class="pagination justify-content-center">
+                            {%if posts.has_previous%}
+                            <li class="page-item">
+                                <a class="page-link" href="?page=1" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span> Inicio
+                                </a>
+                            </li>
+                                
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{posts.previous_page_number}}">&laquo;</a>
+                            </li>
+                            {%endif%}
+                            {%for pagina in paginas%}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{pagina}}">{{pagina}}</a>
+                            </li>
+                            {%endfor%}
+                            {%if posts.has_next%}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{posts.next_page_number}}" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{posts.paginator.num_pages}}">Ultima</a>
+                            </li>
+                            {%endif%}
+                        </ul>
+                    </nav> -->
+                    
+                    
+        </div>
+        
+        
+        <div class="box-aside1">
+            <div class="box-inside-aside1">
+                <p><small class="text-muted" style="font-style: italic; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"; ></small> Lucha por la Justicia Social, los Derechos Humanos, de Género y de nuestros Pueblos Originarios<p>
+                <h1>"OPCION POR LOS POBRES"</h1>
+                <a class="btn btn-warning" href="{%url 'usuarios:Logearse'%}" ><h3>UNIRSE</h3></a>
+
+                
             </div>
         </div>
+        
+        
+        <div class="box-aside2" style="background-color: plum;">ASIDE2
+                
+        </div>
+        
+        
+        
+            <!-- <div class="box-footer">FOOTER
+        
+            </div> -->
+                
+    </div>    
 
-        <!-- <div class="bg-image w-100 vh-100 d-flex justify-content-center align-items-center">
-            <div class="content text-center"></div>
-            <h1>TEXTO</h1>
-        </div> -->
+
+
+
 
 
 
         <!--SIDE BAR - BODY-->
         <br>
     <div class="container">  
-        <div class="container-lg">
+        <div class="container-sm">
             <div class="row">
                 <h3>Últimas Noticias</h3>
                 {%for post in noticia %}
                 <div class="col-sm-9 card card-noticia-home">
                     <div class="row p-2">
-                        <div class="col-md-4">
+                        <div class="col-sm-4">
                             <img src="{{post.imagen.url}}" class="img-fluid rounded-start" alt="...">
                         </div>
-                          <div class="col-md-8">
+                          <div class="col-sm-8">
                             <div class="card-body" style="position:relative;">
                               <h5 class="card-title">{{post}}</h5>
                               <p class="card-text">{{post.TextCorto}}</p>
@@ -65,40 +128,12 @@
                 </div>
             {%endfor%}
             </div>
-            <a class="btn btn-primary" href="{%url 'noticias:listar_noticias' %}" role="button" style="margin-top: 0.5rem;">Ver más noticias...</a>
+            <!-- <a class="btn btn-primary" href="{%url 'noticias:listar_noticias' %}" role="button" style="margin-top: 0.5rem;">Ver más noticias...</a> -->
         </div>
     </div>
   
 
-        {%endblock contenido%} 
-                    <!--FOOTER-->
-      <!--              <div class="container">
-                        <div class="row">
-                            <div class="col" style="background-color: #ffff;">
-                                FOOTER
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3" style="background-color:aqua;">
-                    ASIDE
-                    <div class="row">
-                        <div class="col m-1" style="background-color: #ffff;">
-                            CATEGORIAS
-                        </div>
-                        <div class="col m-1" style="background-color: #ffff;">
-                            EVENTOS(calendario)
-                        </div>
-                        <div class="col m-1" style="background-color: #ffff;">
-                            TALLERES
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>-->
-
-        <!--SEPARADOR-->
+{%endblock contenido%} 
         
 
 

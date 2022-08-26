@@ -7,7 +7,7 @@
 
 body {
      background-color: snow; 
-    /* padding-top: 70px; */    
+     /* padding-top: 70px;     */
 }
 
             /* NAV */
@@ -23,18 +23,156 @@ nav{
 /******************************/
             /* Main */
 
- 
-.bg-image{
-    background-image: url('../img/iglesia.jpg');
-    background-size: cover; 
-    background-position: center;
-}
- 
-.bg-image h1{
-    margin-top: 200px;
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 70px auto;
+    font-size: 15px;
+    /* background-color: khaki; */
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-template-rows: repeat(3,auto);
+    gap: 30px;
+    }
+                
+.contenedor > *{
+    /* background-color:darkgrey; */
+    text-align:  center;
+    display: flex;
+    }
+                
+.box-noticias1{
+    grid-row: 1/ 3;
+    flex-direction: column;
+    text-align: start;
+    }
+                
+.Titulo h1{
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
+                
+    .box-noticias1 .box-img{
+    max-width: 900px;
+    max-height: 500px;
+    }
+                
+.box-info-noticia{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    text-align: left;
+    }
+                
+.box-info-noticia h1{
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+    }
+                
+.box-info-noticia .p-textcorto{
+    color: #343a40;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    }
+                
+.box-info-noticia a{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    }
+        /*Noticias contenedor*/
+                
+/***************   ASIDE1     ********************/
+.box-aside1{
+    max-height: 1000px;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    background-image: url(../img/iglesia2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    }
 
+.box-inside-aside1{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:60%;
 }
 
-.col-md-9{
-    height: 500px;
+.box-inside-aside1 h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
 }
+
+.box-inside-aside1 h3{
+    font-size: 20px;
+}
+
+/***************    ASIDE2    ********************/
+.box-aside2{
+    padding-bottom: 1000px;
+}
+.box-footer{
+    grid-column: 1 / 3;
+    }
+                
+                
+                
+                
+/* @media all and (max-width: 1460px){
+        .contenedor{
+            margin: 0 50px;
+            font-size: 15px;
+            display: grid;
+            grid-template-columns: 70% auto;
+            grid-template-rows: repeat(3,auto);
+            gap: 10px;
+            } 
+        } */
+                
+                
+                
+@media all and (max-width: 768px){
+    .box-noticias1, .box-aside1, .box-aside2{
+        grid-column: 1 / 3;
+    }
+    .contenedor{
+        width: 100%;
+        font-size: 15px;
+        /* background-color: khaki; */
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(5,auto);
+        gap: 10px;
+        }
+    .box-info-noticia{
+        margin-left: 10px;
+    }      
+    .box-noticias1 .box-img{
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+        }
+    .box-aside1{
+        width: 100%;
+        height: 350px;
+        max-height: 1000px;
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+        background-image: url(../img/iglesia2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        }
+        .box-aside2{
+            padding-bottom: 0px;
+        }
+    }
