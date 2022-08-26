@@ -29,6 +29,7 @@ urlpatterns = [
     path('', views.Home, name = 'home'),
     path('contacto/', views.contacto, name = 'contacto'),
     path('mision_vision/', views.mision_vision, name = 'mision_vision'),
+    path('eventos/', views.eventos, name = 'eventos'),
     path('noticias/',include('apps.noticias.urls')),
     path('usuarios/',include('apps.usuarios.urls')),
     path('Actividades/',include('apps.actividades.urls')),
