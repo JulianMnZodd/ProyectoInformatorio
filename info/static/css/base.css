@@ -1,11 +1,12 @@
 
 body {
-    background-color: aliceblue;
+    background-color: rgb(245, 243, 243);
+    border-bottom: 2rem;
 }
 
 .card-noticia-home {
     transition: box-shadow 0.3s;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(230, 222, 222);
     margin: 0.5rem;
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
     cursor:pointer;
@@ -15,4 +16,41 @@ body {
     box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.5);
 }
 
+.cont-noticia {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top: 0.5rem;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-color: rgb(165, 150, 150);
+    border-style: solid;
+    background-color: rgb(227, 235, 241);
+    margin: 0;
+}
+
+.cont-actividad {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top: 0.5rem;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-color: rgb(165, 150, 150);
+    border-style: solid;
+    background-color: rgb(245, 243, 243);
+    margin: 0;
+}
+
+.card-actividad-home {
+    transition: box-shadow 0.3s;
+    background-color: rgb(228, 163, 163);
+    margin: 0.5rem;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+    cursor:pointer;
+}
+
+.card-actividad-home:hover {
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.5);
+}
 
