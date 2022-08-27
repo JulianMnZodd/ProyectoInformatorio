@@ -37,7 +37,8 @@
             <div class="card border-secondary mb-3" style="max-width: 50rem;">
                 <div class="card-header" style="display: flex; justify-content:space-between;">
                         <label>Usuario: {{x.usuario}} </label> 
-                        <a style="font-size:10px ;" ref="{% url 'noticias:eliminar_comentario' x.pk %}" class="btn-close" ></a>
+                        <a style="font-size:10
+                        px ;" ref="{% url 'noticias:eliminar_comentario' x.pk %}" class="btn-close" ></a>
                 </div>
                 <div class="card-body">
                     <p class="card-text">{{x.texto}}</p>

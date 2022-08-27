@@ -15,19 +15,19 @@
 
         <div class="box-noticias1">
             <div class="Titulo">
-                <h1>NOVEDADES</h1>
+                <h1>Actividades</h1>
                 <hr/>
             </div>
-            {%for post in noticia%}
-            <img src="{{post.imagen.url}}" alt="" class="box-img">
+            {%for a in actividad%}
+            <img src="{{a.imagen.url}}" alt="" class="box-img">
             <div class="box-info-noticia">
                 <p><small class="text-muted" style="font-style: italic; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"; >{{post.creado}}</small></p>
-                <h1>{{post}}</h1>
-                <p class="p-textcorto">{{post.TextCorto}}</p>
-                <a href="{%url 'noticias:MostrarNoticia' post.id %}"> Saber más..</a> 
+                <h1>{{a}}</h1>
+                <p class="p-textcorto">{{a.cuerpo}}</p>
+                <a href="{%url 'actividades:detalle_actividad' a.id %}"> Saber más..</a> 
             </div>
             {%endfor%}
-            <a class="btn btn-primary" href="{%url 'noticias:listar_noticias' %}" role="button" style="margin-top: 0.5rem;">Ver más noticias...</a>
+            <a class="btn btn-primary" href="{%url 'actividades:listar_actividades' %}" role="button" style="margin-top: 0.5rem;">Ver todas las actividades...</a>
                     <!-- <nav aria-label="Page navigation example" style="background-color:transparent;">
                         <ul class="pagination justify-content-center">
                             {%if posts.has_previous%}

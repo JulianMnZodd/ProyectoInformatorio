@@ -1,12 +1,12 @@
 from django.shortcuts import render
 
 from apps.noticias.models import Noticia
+from apps.actividades.models import Actividad
 
 def Home(request):
-    ctx={}
-    noticia=Noticia.objects.all().order_by('-creado')[:4]
-    ctx['noticia']=noticia
-    return render(request,'home.html',ctx)
+    noticia=Noticia.objects.all().order_by('-creado')[:3]
+    actividad=Actividad.objects.all().order_by('-fecha')[:3]
+    return render(request,'home.html',{'noticia':noticia,'actividad':actividad})
     
 
 def contacto(request):

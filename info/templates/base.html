@@ -12,14 +12,15 @@
     <!-- CSS Local -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"> <!-- No funciona? -->
     <link rel="stylesheet" type="text/css" href="../static/css/base.css">
+    <link rel="icon" href="{% static 'img/iconcebs.ico' %}">
 </head>
 <body>
   <!-- Cabecera -->
   <header>
     <nav class="navbar navbar-expand-md fixed-top  p-md-3">
         <div class="container-fluid">
-        <a class="navbar-brand" href="{%url 'home'%}">
-          <i class="fa-solid fa-church" style="color: #fff;"></i>
+        <a style="margin-left: 20px;" class="navbar-brand" href="{%url 'home'%}">
+          <img  style="width: 40px; " src="{% static 'img/iconcebs_1.svg' %} " alt="logoCBEs">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
