@@ -2,7 +2,34 @@
 {%load static %}
 
 {%block contenido%}
-    <div class="col-md-6 offset-md-3 ">
+
+
+<div class="col-md-6 offset-md-3 ">
+    <hr><hr><hr><hr><hr>
+    <div class="row">
+        <div class="d-flex justify-content-center">
+            <div class="card mb-3" style="width: 100%;">
+                <div class="d-flex justify-content-center">
+                    <img src="{{resultado.imagen.url}}" class="card-img-top"style="max-height:600px;">
+                </div>
+                <div class="card-body">
+                <h1 class="card-title">{{resultado.titulo}}</h1>
+                <p class="card-text"><small class="text-muted">Fecha del evento: {{resultado.fecha}}</small></p>
+                <p class="card-text"><small class="text-muted">Animador encargado: {{resultado.animador.nombre}} <br> Zona:{{resultado.animador.zona}}</small></p>
+                <p><em>{{resultado.cuerpo}}</em></p>
+                </div>
+            </div>  
+        </div>
+</div>
+</div>
+
+{% endblock%}
+
+
+
+
+
+<!--<<div class="col-md-6 offset-md-1 ">
         <hr><hr><hr><hr><hr>
         <div class="row">
             <div class="d-flex justify-content-center">
@@ -19,28 +46,4 @@
                 </div>  
             </div>
     </div>
-    </div>
-
-{% endblock%}
-
-
-
-
-
-<!--<div class="col-md-6 offset-md-3">
-            <div class="row">
-                <div class="d-flex justify-content-center">
-                    <div class="card mb-3" style="width: 100%;">
-                        <div class="d-flex justify-content-center">
-                            <img src="{{resultado.imagen.url}}" class="card-img-top"style="max-height:400px;">
-                        </div>
-                        <div class="card-body">
-                        <h1 class="card-title">{{resultado.titulo}}</h1>
-                        <p class="card-text"><small class="text-muted">Fecha del evento: {{resultado.fecha}}</small></p>
-                        <p class="card-text"><small class="text-muted">Animador encargado: {{resultado.animador.nombre}} <br> Zona:{{resultado.animador.zona}}</small></p>
-                        <p><em>{{resultado.cuerpo}}</em></p>
-                        </div>
-                    </div>  
-                </div>
-        </div>
     </div>-->
