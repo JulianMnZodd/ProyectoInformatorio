@@ -13,12 +13,11 @@
         {%for n in acts %}
         <div class="col">
           <div class="card shadow border" >
-            <img src="{{n.imagen.url}} " class="card-img-top" alt="..." style="max-height: 500px;">
+            <img src="{{n.imagen.url}} " class="card-img-top" style="max-height: 500px;">
             <div class="card-body">
               <h6 class="list-group-item"></h6>
               <h5 class="card-title">{{ n }}</h5>
               <h6 class="card-title"> {{ n.fecha }}</h6>
-              <p class="card-text">{{ n.cuerpo}}.</p>
               <a type="button" class="btn btn-outline-primary" href="{% url 'actividades:detalle_actividad' n.pk%}">Saber más...</a>
 
             </div>

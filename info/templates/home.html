@@ -2,98 +2,50 @@
 {%load static %}
 
 {%block contenido%}
-
     <!-- Contenido -->
-    
-        <!--BANNER-->
 
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
-
-     
-
-    <div class="contenedor">
-
-        <div class="box-noticias1">
-            <div class="Titulo">
-                <h1>Actividades</h1>
-                <hr/>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            {%for a in actividad%}
-            <img src="{{a.imagen.url}}" alt="" class="box-img">
-            <div class="box-info-noticia">
-                <p><small class="text-muted" style="font-style: italic; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"; >{{post.creado}}</small></p>
-                <h1>{{a}}</h1>
-                <p class="p-textcorto">{{a.cuerpo}}</p>
-                <a href="{%url 'actividades:detalle_actividad' a.id %}"> Saber más..</a> 
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'img/home2.png' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Comunidad Eclesiastica de Base</h5>
+                <p>Juan José Castelli</p>
+                </div>
             </div>
-            {%endfor%}
-            <a class="btn btn-primary" href="{%url 'actividades:listar_actividades' %}" role="button" style="margin-top: 0.5rem;">Ver todas las actividades...</a>
-                    <!-- <nav aria-label="Page navigation example" style="background-color:transparent;">
-                        <ul class="pagination justify-content-center">
-                            {%if posts.has_previous%}
-                            <li class="page-item">
-                                <a class="page-link" href="?page=1" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span> Inicio
-                                </a>
-                            </li>
-                                
-                            <li class="page-item">
-                                <a class="page-link" href="?page={{posts.previous_page_number}}">&laquo;</a>
-                            </li>
-                            {%endif%}
-                            {%for pagina in paginas%}
-                            <li class="page-item">
-                                <a class="page-link" href="?page={{pagina}}">{{pagina}}</a>
-                            </li>
-                            {%endfor%}
-                            {%if posts.has_next%}
-                            <li class="page-item">
-                                <a class="page-link" href="?page={{posts.next_page_number}}" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="?page={{posts.paginator.num_pages}}">Ultima</a>
-                            </li>
-                            {%endif%}
-                        </ul>
-                    </nav> -->
-                    
-                    
-        </div>
-        
-        
-        <div class="box-aside1">
-            <div class="box-inside-aside1">
-                <p><small class="text-muted" style="font-style: italic; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"; ></small> Lucha por la Justicia Social, los Derechos Humanos, de Género y de nuestros Pueblos Originarios<p>
-                <h1>"OPCION POR LOS POBRES"</h1>
-                <a class="btn btn-warning" href="{%url 'usuarios:Logearse'%}" ><h3>UNIRSE</h3></a>
-
-                
+            <div class="carousel-item">
+                <img src="{% static 'img/home1.png' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Opcion por los pobres</h5>
+                <p>"Haciendo más visible la unión entre la fé y la vida"</p>
+                </div>
             </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/home3.png' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Gracias por visitarnos!</h5>
+                </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        
-        
-        <div class="box-aside2" style="background-color: plum;">ASIDE2
-                
-        </div>
-        
-        
-        
-            <!-- <div class="box-footer">FOOTER
-        
-            </div> -->
-                
-    </div>    
-
-
-
-
-
-
 
         <!--SIDE BAR - BODY-->
-        <br>
+        <br><br><br><br><br>
     <div class="container-l cont-noticia">  
         <div class="container-sm">
             <div class="row">
