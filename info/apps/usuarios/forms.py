@@ -6,11 +6,14 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import Usuario
 
 class RegistroForm(UserCreationForm):
-    Email = forms.EmailField(label='Correo',required=True)
+    Email = forms.EmailField(label='Correo',required=True, 
+                    widget=forms.TextInput(attrs={'placeholder': 'Email'}))
     
-    first_name = forms.CharField(label='',required=True)
+    first_name = forms.CharField(label='Nombre',required=True, 
+                    widget=forms.TextInput(attrs={'placeholder': 'Nombre'}))
     
-    last_name = forms.CharField(label='Apellido', required=True)
+    last_name = forms.CharField(label='Apellido', required=True, 
+                    widget=forms.TextInput(attrs={'placeholder': 'Apellido'}))
     password1 = forms.CharField(
         label='Contraseña', widget=forms.PasswordInput, required=True)
     password2 = forms.CharField(
