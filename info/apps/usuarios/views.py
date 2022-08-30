@@ -23,8 +23,5 @@ class Registrarse(CreateView):
 def Logearse(request):
     return render(request,'usuarios/Logearse.html')
 
-#def Registrarse(request):
- #   return render(request,'usuarios/Registrarse.html')
 
-def index(request):
-    return render(request,'usuarios/index.html')
+
